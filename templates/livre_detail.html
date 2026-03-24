@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Détails du Livre{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card mb-3 shadow-sm">
+        {% if livre.image %}
+        <img src="{{ livre.image.url }}" class="card-img-top" alt="{{ livre.titre }}">
+        {% endif %}
+        <div class="card-body">
+            <h3 class="card-title">{{ livre.titre }}</h3>
+            <p class="card-text"><strong>Auteur :</strong> {{ livre.auteur }}</p>
+            <p class="card-text"><strong>Prix :</strong> {{ livre.prix }} TND</p>
+            <p class="card-text"><strong>Description :</strong> {{ livre.description }}</p>
+            <a href="{% url 'livre_list' %}" class="btn btn-secondary mt-3">Retour au catalogue</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
