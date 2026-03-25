@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gestionlivre.apps.GestionlivreConfig',
+    'account.apps.AccountConfig'
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,5 @@ STATIC_URL = 'static/'
 #MEDIA_ROOT = BASE_DIR / 'images'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGIN_REDIRECT_URL = 'livre_list'
